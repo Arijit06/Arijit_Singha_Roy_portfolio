@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="style.css">
   <!-- FontAwesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
   <!-- Dynamic Background -->
@@ -15,7 +14,12 @@
 
   <!-- Navigation Bar -->
   <nav>
-    <ul>
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul class="nav-list">
       <li><a href="#home">Home</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -29,7 +33,7 @@
   </section>
 
   <!-- Portfolio Section -->
-<section id="portfolio">
+  <section id="portfolio">
     <h2>Portfolio</h2>
     <div class="portfolio-grid">
       <!-- Project 1 -->
@@ -44,7 +48,6 @@
       </div>
   
       <!-- Project 2 -->
-      <!-- Cross-Browser Testing -->
       <div class="project-card">
         <i class="fas fa-window-restore project-icon"></i>
         <h3>Cross-Browser Testing</h3>
@@ -89,33 +92,27 @@
       </div>
   
       <!-- Accomplishments -->
-      <!-- Accomplishments -->
-<div class="project-card">
-    <i class="fas fa-trophy project-icon"></i>
-    <h3>Accomplishments</h3>
-    <ul>
-      <li>Solved over 900+ problems on coding platforms like LeetCode, Codeforces, and Codechef.</li>
-      <li>Received the <strong>Great Performer’s Award at Voya India</strong> <strong>three times</strong> for contributions to automation.</li>
-    </ul>
-  </div>
+      <div class="project-card">
+        <i class="fas fa-trophy project-icon"></i>
+        <h3>Accomplishments</h3>
+        <ul>
+          <li>Solved over 900+ problems on coding platforms like LeetCode, Codeforces, and Codechef.</li>
+          <li>Received the <strong>Great Performer’s Award at Voya India</strong> <strong>three times</strong> for contributions to automation.</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <!-- Contact Section -->
- <!-- Contact Section -->
-<section id="contact">
+  <section id="contact">
     <h2>Contact Me</h2>
     <p>Feel free to reach out to me via LinkedIn or email:</p>
-    
-    <!-- LinkedIn Link -->
     <a href="https://www.linkedin.com/in/arijit-singha-roy-2a7b88a7" target="_blank" class="btn">
       <i class="fab fa-linkedin"></i> Connect on LinkedIn
     </a>
-  
-    <!-- Gmail Link -->
     <a href="mailto:arijitsingharoy6@gmail.com?subject=Contact%20from%20Portfolio&body=Hi%20Arijit," class="btn">
       <i class="fas fa-envelope"></i> Send me an Email
     </a>
-  
     <p>Check out my coding profiles:</p>
     <a href="https://leetcode.com/arijitsingharoy6/" target="_blank" class="btn">
       <i class="fas fa-code"></i> LeetCode Profile
@@ -124,5 +121,15 @@
       <i class="fab fa-github"></i> GitHub Profile
     </a>
   </section>
+
+  <script>
+    // Toggle mobile menu
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navList = document.querySelector('.nav-list');
+
+    mobileMenu.addEventListener('click', () => {
+      navList.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
